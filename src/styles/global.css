@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Properties */
+:root {
+  --aieo-50: #faf5ff;
+  --aieo-100: #f3e8ff;
+  --aieo-200: #e9d5ff;
+  --aieo-300: #d8b4fe;
+  --aieo-400: #c084fc;
+  --aieo-500: #a855f7;
+  --aieo-600: #9333ea;
+  --aieo-700: #7c3aed;
+  --aieo-800: #6b21a8;
+  --aieo-900: #581c87;
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-800 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-purple-600 text-white hover:bg-purple-700 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-purple-600 border-2 border-purple-500 hover:bg-purple-50;
+  }
+  
+  .btn-whatsapp {
+    @apply bg-green-500 text-white hover:bg-green-600;
+  }
+  
+  /* Brand Bar */
+  .brand-bar {
+    @apply bg-gray-100 py-2 text-sm font-medium;
+  }
+  
+  .brand-bar a {
+    @apply text-gray-500 hover:text-gray-700 transition-colors px-3;
+  }
+  
+  .brand-bar a.active {
+    @apply text-purple-600 font-bold;
+  }
+  
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow;
+  }
+  
+  /* Feature Cards */
+  .feature-card {
+    @apply bg-white rounded-xl p-6 border border-gray-100 hover:border-purple-200 hover:shadow-md transition-all;
+  }
+  
+  /* Language Switcher */
+  .lang-switcher a {
+    @apply text-gray-500 hover:text-purple-600 px-2 text-sm;
+  }
+  
+  .lang-switcher a.active {
+    @apply text-purple-600 font-bold;
+  }
+  
+  /* Comparison Table */
+  .comparison-card {
+    @apply rounded-xl p-6 text-center;
+  }
+  
+  .comparison-card.before {
+    @apply bg-gray-100 text-gray-600;
+  }
+  
+  .comparison-card.after {
+    @apply bg-purple-600 text-white shadow-xl;
+  }
+  
+  /* FAQ */
+  .faq-item {
+    @apply border-b border-gray-200 py-4;
+  }
+  
+  .faq-item:last-child {
+    @apply border-b-0;
+  }
+  
+  /* Stats */
+  .stat-card {
+    @apply text-center;
+  }
+  
+  .stat-value {
+    @apply text-3xl font-bold text-purple-600;
+  }
+  
+  .stat-label {
+    @apply text-sm text-gray-500 mt-1;
+  }
+  
+  /* WhatsApp Float Button */
+  .whatsapp-float {
+    @apply fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50;
+  }
+  
+  /* Section Styles */
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-alt {
+    @apply bg-gray-50;
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent;
+  }
+  
+  /* Gradient Background */
+  .gradient-bg {
+    @apply bg-gradient-to-r from-purple-600 to-purple-800;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
